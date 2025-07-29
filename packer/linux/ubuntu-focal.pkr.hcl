@@ -71,7 +71,7 @@ source "amazon-ebs" "ubuntu" {
     owners = ["099720109477"]
 
     filters = {
-      name                = "ubuntu/images/*ubuntu-focal-20.04-*"
+      name                = "ubuntu/images/*ubuntu-noble-24.04-*"
       architecture        = "${var.arch}"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
@@ -87,7 +87,7 @@ build {
   ]
 
   provisioner "ansible" {
-    playbook_file = "ansible/ubuntu-focal.yml"
+    playbook_file = "ansible/ubuntu-noble.yml"
     user          = "ubuntu"
     use_proxy     = false
     extra_arguments = [
