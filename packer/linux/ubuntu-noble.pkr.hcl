@@ -80,7 +80,7 @@ source "amazon-ebs" "ubuntu" {
 }
 
 build {
-  name = "semaphore-agent-ubuntu-focal"
+  name = "semaphore-agent-ubuntu-noble"
 
   sources = [
     "source.amazon-ebs.ubuntu"
