@@ -44,7 +44,7 @@ variable "systemd_restart_seconds" {
 packer {
   required_plugins {
     amazon = {
-      version = ">= 0.0.2"
+      version = "1.3.9"
       source  = "github.com/hashicorp/amazon"
     }
   }
@@ -65,7 +65,7 @@ source "amazon-ebs" "ubuntu" {
   }
 
   source_ami = "ami-0416cbe3c21834f41"
-  
+
 }
 
 build {
